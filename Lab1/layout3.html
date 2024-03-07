@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab1-Bài 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512..."
+    />
+
+    <style>
+      header {
+        position: relative;
+      }
+      .shopping-mall {
+        position: absolute;
+        bottom: 20px;
+        font-variant: small-caps;
+      }
+      .shopping-mall > h1 {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 50px;
+        color: white;
+        letter-spacing: 0.3px;
+        box-shadow: 0 0 2px black;
+        padding-bottom: 0px;
+        border-bottom: 1px dotted gray;
+        margin: 0px;
+      }
+      .shopping-mall > h5 {
+        margin-top: 5px;
+        letter-spacing: 0.5px;
+      }
+      .icon {
+        color: white;
+        padding-right: 5px;
+      }
+      .card-poly{
+        margin-top: 5px;
+        text-align: center;
+      }
+      .card-poly ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        font-variant: small-caps;
+      }
+      .card-poly .panel-heading strong{
+        font-variant: small-caps;
+        font-size: large;
+        text-shadow: 0 0 2px darkgray;
+      }
+      .panel-body{
+        padding: 20px 20px;
+        border: 1px solid black;
+        margin: 20px 0px;
+        border-radius: 10px;
+      }
+      .top{
+        display: flex;
+      }
+      .top img{
+        width: 100px;
+      }
+      ul li{
+        display: block;
+        text-align: left;
+      }
+      .panel-default .panel-heading{
+        border: 1px solid black;
+        background-color: aqua;
+        padding: 5px 20px;
+        text-align: left;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .panel-default .list-group a{
+        border: 1px solid black;
+        padding: 5px 20px;
+        text-align: left;
+      }
+      .button{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    </style>
+  </head>
+</div>
+  <body>
+    <div class="container text-center">
+      <header class="row">
+        <div class="shpping-mall">
+          <h1>Online Shpping mall</h1>
+          <h4>The center point of the professional programing</h4>
+        </div>
+        <img src="./images/header-object.png" class="pull-right" alt="" />
+      </header>
+
+      <nav>
+        <!-- Nav -->
+        <nav
+          class="row navbar navbar-expand-sm navbar-dark"
+          style="background-color: #041420"
+        >
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          ></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-home icon"></i>Home
+                  <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-shopping-bag"></i>
+                  Product</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                  User</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#">Detail</a>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+
+              <input
+                class="form-control mr-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              > 
+                Search
+              </button>
+            </form>
+          </div>
+        </nav>
+        <!-- End nav -->
+      </nav>
+
+      <div class="row">
+        <article class="col-md-9" style="background-color: rgb(199, 199, 186)">
+          Article
+        </article>
+        <aside class="col-md-3">
+            <div class="poly-card">
+                <div class="panel panel-default">
+                    <div class="panel-body top">
+                        <img src="./images/shoppingcart.gif" alt="">
+                        <ul class="col-sm-7">
+                            <li>1000 items</li>
+                            <li>$1000</li>
+                            <li><a href="">View card</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="post">
+                            <input type="text" placeholder="Keyword" class="form-control " name="" id="">
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="gliphicon gliphicon-th-list"></span>
+                        <i class="fas fa-list"></i>
+                        <strong>Chủng loại</strong>
+                    </div>
+                    <div class="list-group">
+                        <a href="" class="list-group-item">Điện thoại</a>
+                        <a href="" class="list-group-item">Máy tính</a>
+                        <a href="" class="list-group-item">Máy tính bảng</a>
+                        <a href="" class="list-group-item">Cục gạch</a>
+                        <a href="" class="button list-group-item">Ipad</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+      </div>
+      <footer>
+        <div class="row card">
+          <div class="card-footer text-muted">
+            <p>FPT Polytechnic &copy; 2024 . All rights severved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
