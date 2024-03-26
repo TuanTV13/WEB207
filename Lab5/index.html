@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bài 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+  <body>
+
+    <div ng-app="myapp">
+
+        <div ng-controller="myctrl1">
+            <div class="form-group">
+                <label>Họ tên</label>
+                <input type="text"
+                  class="form-control" ng-model=" student.name " name="" id="" aria-describedby="helpId" placeholder="">
+              </div>
+              <div class="form-group">
+                <label>Ngày sinh</label>
+                <input type="text"
+                  class="form-control" ng-model=" student.birthday " name="" id="" aria-describedby="helpId" placeholder="">
+              </div>
+              <div class="form-group">
+                <label>Điểm</label>
+                <input type="text"
+                  class="form-control" ng-model=" student.mark " name="" id="" aria-describedby="helpId" placeholder="">
+              </div>
+              <div class="form-group">
+                  <button ng-click="save()">Lưu</button>
+                  <button ng-click="cancel()">Hủy</button>
+              </div>
+        </div>
+
+        <div ng-controller="myctrl2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Điểm</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in students">
+                        <td scope="row">{{x.name}}</td>
+                        <td>{{x.birthday}}</td>
+                        <td>{{ x.mark }}</td>
+                        <td>
+                            <a href="#" ng-click="edit($index)">Sửa</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <script>
+            var app = angular.module("myapp", []);
+            app.controller("myctrl2", function($scope){
+                $scope.$parent.students = [
+                    {
+                        name: "Tuan",
+                        birthday: 2004,
+                        mark: 9
+                    },
+                    {
+                        name: "Ha",
+                        birthday: 21,
+                        mark: 10
+                    }
+                ];
+
+                $scope.edit = function (index){
+                    $scope.$parent.index = index;
+                    $scope.$parent.student = angular.copy($scope.$parent.students[index]);
+                }
+            });
+
+            app.controller("myctrl1", function($scope){
+                $scope.save = function() {
+                    $scope.$parent.students[$scope.$parent.index] = $scope.student;
+                }
+
+                $scope.cancel = function() {
+                    $scope.$parent.student = angular.copy($scope.$parent.students[$scope.$parent.index]);
+                }
+            });
+        </script>
+
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
