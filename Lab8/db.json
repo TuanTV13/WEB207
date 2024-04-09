@@ -1,0 +1,46 @@
+{
+  "san-pham": [
+    {
+      "id": "1",
+      "maSP": "SP001",
+      "ten": "SP1",
+      "soLuong": 5,
+      "gia": 100
+    },
+    {
+      "id": "2",
+      "maSP": "SP001",
+      "ten": "SP1",
+      "soLuong": 5,
+      "gia": 100
+    },
+    {
+      "id": "3",
+      "maSP": "SP001",
+      "ten": "SP1",
+      "soLuong": 5,
+      "gia": 100
+    },
+    {
+      "id": "4",
+      "maSP": "SP004",
+      "ten": "SP4",
+      "soLuong": "120",
+      "gia": "300"
+    },
+    {
+      "id": "5",
+      "maSP": "444",
+      "ten": "sữa1",
+      "soLuong": "10",
+      "gia": "10"
+    },
+    {
+      "id": "19",
+      "maSP": "PH3",
+      "ten": "TUANNNG1",
+      "soLuong": "2",
+      "gia": "111"
+    }
+  ]
+}

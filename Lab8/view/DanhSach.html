@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">Danh sách sản phảm</h1>
+<a href="#!san-pham/add" class="btn btn-info">THÊM</a>
+<table class="table table-bordered table-warning table-hover mt-5">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">MÃ SP</th>
+            <th scope="col">TÊN SP</th>
+            <th scope="col">SỐ LƯỢNG</th>
+            <th scope="col">GIÁ</th>
+            <th scope="col">ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sp in dsSP">
+            <th scope="row">{{sp.id}}</th>
+            <td>{{sp.maSP}}</td>
+            <td>{{sp.ten}}</td>
+            <td>{{sp.soLuong}}</td>
+            <td>{{sp.gia}}</td>
+            <td><a href="" class="btn btn-danger" ng-click="xoa(sp.id)">Xóa</a>
+                <a href="#!san-pham/update/{{sp.id}}" class="btn btn-success">Sửa</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
