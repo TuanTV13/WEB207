@@ -22,5 +22,45 @@ app.controller('UserController', function( $scope, $http, $routeParams, $locatio
 
 
     // Them moi
+    $scope.create = () => {
+        $http.post(endpoint, $scope.form_user).then(
+            (res) => {
+                alert("Done");
+
+                $location.path('/users');
+            },
+            (err) => {alert(err.statusText);}
+        )
+    }
+
+    $scope.delete = (id) => {
+        if (confirm("Bạn có chắc chắn muốn xóa?")) {
+            $http.delete(endpoint + '/' + id)
+                .then(
+                    (res) => { 
+                        alert("Đã xóa"); 
+                        // Gọi hàm hoặc thực hiện các hành động khác sau khi xóa thành công
+
+                        $location.path('/users');
+
+                    },
+                    (err) => { alert("Lỗi: " + err.statusText); }
+                );
+        }
+    };
+    
+    $scope.update = (id) => {
+        $http.put(endpoint + '/' + id, $scope.form_user)
+            .then(
+                (res) => { 
+                    alert("Cập nhật thành công"); 
+                    // Gọi hàm hoặc thực hiện các hành động khác sau khi cập nhật thành công
+
+                    $location.path('/users');
+                },
+                (err) => { alert("Lỗi: " + err.statusText); }
+            );
+    };
+    
 
 });

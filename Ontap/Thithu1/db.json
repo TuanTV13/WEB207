@@ -1,16 +1,22 @@
 {
-    "users": [
-        {
-            "id": "abc",
-            "name": "Tran Van Tuan",
-            "email": "tuantvph33227@gmail.com",
-            "phone": 1234567
-        },
-        {
-            "id": "aab",
-            "name": "Hoang Thi Ha",
-            "email": "hahtth@gmail.com",
-            "phone": 1222222
-        }
-    ]
+  "users": [
+    {
+      "id": "abc",
+      "name": "Tran Van Tuan",
+      "email": "tuantvph33227@gmail.com",
+      "phone": 1234567
+    },
+    {
+      "id": "aab",
+      "name": "Hoang Thi Ha",
+      "email": "hahtth@gmail.com",
+      "phone": 1222222
+    },
+    {
+      "id": "7d42",
+      "name": "Tuan nè",
+      "email": "tuan da sua",
+      "phone": "01919191"
+    }
+  ]
 }

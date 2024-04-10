@@ -22,6 +22,6 @@ app.config(function ($routeProvider){
         controller: 'UserController'
     })
     .otherwise({
-        template: "<h1>404 Not Found</h1>"
+        templateUrl: "<h1>404 Not Found</h1>"
     })
 });
